@@ -1,5 +1,14 @@
 import Image from "next/image";
-import styles from "./page.module.css";
+import styles from "@/app/page.module.css";
+
+import getConfig from "next/config";
+const {basePath} = getConfig().publicRuntimeConfig;
+
+export const metadata = {
+  title: '鎧神社（よろいじんじゃ）公式サイト --平将門の鎧が眠ると伝えられる北新宿の神社--',
+  description: '伝説の地・鎧神社へ、社殿で手を合わせれば、悠久の歴史を感じられます',
+}
+
 
 export default function Home() {
   return (
@@ -7,7 +16,7 @@ export default function Home() {
       <main className={styles.main}>
         <Image
           className={styles.logo}
-          src="/next.svg"
+          src={`${basePath}/next.svg`}
           alt="Next.js logo"
           width={180}
           height={38}
@@ -29,7 +38,7 @@ export default function Home() {
           >
             <Image
               className={styles.logo}
-              src="/vercel.svg"
+              src={`${basePath}/vercel.svg`}
               alt="Vercel logomark"
               width={20}
               height={20}
@@ -54,7 +63,7 @@ export default function Home() {
         >
           <Image
             aria-hidden
-            src="/file.svg"
+            src={`${basePath}/file.svg`}
             alt="File icon"
             width={16}
             height={16}
@@ -68,7 +77,7 @@ export default function Home() {
         >
           <Image
             aria-hidden
-            src="/window.svg"
+            src={`${basePath}/window.svg`}
             alt="Window icon"
             width={16}
             height={16}
@@ -82,7 +91,7 @@ export default function Home() {
         >
           <Image
             aria-hidden
-            src="/globe.svg"
+            src={`${basePath}/globe.svg`}
             alt="Globe icon"
             width={16}
             height={16}
