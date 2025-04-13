@@ -9,6 +9,7 @@ const nextConfig = {
         basePath, // basePathを他のファイルから読み込めるようにする
     },
     trailingSlash: true,
+    images: { unoptimized: true }, //Imageコンポーネントを使用しないようにする　表示速度に影響はあるのか、、、
 };
 
 export default nextConfig;
