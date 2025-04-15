@@ -2,10 +2,13 @@ import Image from "next/image";
 import styles from "@/components/Header/header.module.css";
 
 import getConfig from "next/config";
+import { HamburgerBtn } from "../HamburgerBtn/page";
 const {basePath} = getConfig().publicRuntimeConfig;
 
 
+
 export function Header() {
+  
   return (
     <>
       <header className={styles.header}>
@@ -35,13 +38,11 @@ export function Header() {
           </nav>
         </div>
 
-        <div id="hamburgerButton">
-          <button className={styles.g_button}>
-          <div className={styles.navbtn}><span></span><span></span><span></span></div>
-          </button>
-      </div>
+        <HamburgerBtn />
       </header>
 
     </>
+
   );
 }
+
