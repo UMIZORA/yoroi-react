@@ -70,7 +70,7 @@ export default function Home() {
 
       <div className={`${styles.banner_content} ${styles.sp_line} ${styles.image_02}`}><a href="shrine_deity/">
         <div className={styles.banner_title}><p>鎧神社のかみさま</p></div>
-        <div className={styles.banner_info}><p>４柱の神様をお祀りしております</p></div>
+        <div className={styles.banner_info}><p>４柱の神様を<br className={styles.forsp}/>お祀りしております</p></div>
         <div className={styles.banner_link}><p>詳しく見る ＞</p></div>
       </a></div>
 

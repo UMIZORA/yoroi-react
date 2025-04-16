@@ -1,5 +1,6 @@
 "use client";
 
+import { motion } from "framer-motion";
 import styles from "@/components/Header/header.module.css";
 
 const handleBtn = () => {
@@ -15,7 +16,7 @@ export function HamburgerBtn() {
     <>
         <div className={styles.hamburgerButton}>
           <button className={styles.g_button} onClick={() => handleBtn()} >
-          <div className={styles.navbtn}><span></span><span></span><span></span></div>
+          <motion.div whileTap={{ scale: 1.5 }} className={styles.navbtn}><span></span><span></span><span></span></motion.div>
           </button>
         </div>
     </>

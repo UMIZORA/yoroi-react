@@ -1,4 +1,7 @@
 .header { width:100%; margin:auto; position:fixed; top:0; height:100px; background-color:rgba(255,255,255,0.9); z-index: 10000; }
+@media screen and (max-width:900px) {
+	.header { height:70px; }
+}
 
 .g_nav { width:100%; max-width:1000px; margin:auto; justify-content: space-between; display:flex; height:100px; align-items: center; }
 .g_nav h1 { width:16%; font-size:24px; padding-left:1em; font-weight: normal; letter-spacing: 5px; position:relative; }
@@ -11,9 +14,10 @@
 .g_nav ul.g_sns li img.auto { width:20px; vertical-align: middle !important; transform: translateY(-10%); }
 
 @media screen and (max-width:900px) {
-  .g_nav { flex-direction: column; background-color:rgba(255,255,255,1); width:100%; height:100vh; position:relative; right:-80%; }
-  .g_nav h1 { display: none; }
-  .g_nav nav { flex-direction: column; }
+  .g_nav { flex-direction: column; position:relative; }
+  .g_nav h1 { width:fit-content; position:fixed; top:22px; left:50%; transform: translateX(-50%); z-index: 1; }
+  .g_nav h1 > a.headerTitle { font-size:20px; margin-left:20px; }
+  .g_nav nav { flex-direction: column; align-items: flex-start; justify-content:flex-start; background-color:rgba(255,255,255,1); width:100%; height:100vh; padding-bottom:calc(100vh); position:relative; z-index: 11; }
   .g_nav div.sp_logo { display: block; width:60%; max-width:200px; margin:70px auto 25px; }
 }
 
@@ -39,20 +43,18 @@
 }
 
 
+
 /* ハンバーガーメニュー */
 .g_button { display: none; }
 @media screen and (max-width:900px) {
 	.g_button { display: block; position:fixed; right:10px; top:13px; background:none; border:none; padding-left:0; padding-right:0; z-index:20000; }
 	.g_button:hover { cursor: pointer; }
 	.navbtn { position: relative;  width: 50px; height:40px; }
-	.navbtn span { display: inline-block; transition: all .4s; position: absolute; left: 20%; height: 2px; border-radius: 5px; background: #020202; width: 60%; }
+	.navbtn span { display: inline-block; position: absolute; left: 20%; height: 2px; border-radius: 5px; background: #020202; width: 60%; }
 	.navbtn span:nth-of-type(1) { top:10px; }
 	.navbtn span:nth-of-type(2) { top:20px; }
 	.navbtn span:nth-of-type(3) { top:30px; }
 	.navbtn:hover { cursor: pointer; }
 	.navbtn:hover span { background-color:#020202; cursor: pointer; }
-	.navbtn.active span:nth-of-type(1) { top: 13px; left: 8px; transform: translateY(6px) rotate(-45deg); width: 70%; }
-	.navbtn.active span:nth-of-type(2){ transform: scale(0,1); transform-origin: center right; width:0; }
-	.navbtn.active span:nth-of-type(3){ top: 38px; left: 8px; transform: translateY(-18px) rotate(45deg); width: 70%; }
 }
 
