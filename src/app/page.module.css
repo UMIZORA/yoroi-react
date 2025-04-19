@@ -40,12 +40,8 @@
 .copy_block .photo_01 { margin-top:100px; width:100%; height:380px; overflow: hidden; position: relative; }
 .copy_block .photo_01::before { content: "Yoroi Jinja"; position:absolute; bottom:4.4%; left:5%; color:rgba(255,255,255,0.5); font-size:18px; letter-spacing: 0.5em; font-family: 'Inter', sans-serif; z-index: 10; }
 .copy_block .photo_01::after { content: ""; position:absolute; width:90%; height:90%; border:solid 1px rgba(255,255,255,0.5); top:5%; left:5%; }
-.copy_block .photo_01 > div { width:100%; height:100%; background-image: url("../../public/photo01.jpg");
-    background-attachment: fixed;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat; }
-.copy_block .photo_01 img.img_parallax { width:100%; }
+.copy_block .photo_01 > div { width:100%; height:100%; clip-path: inset(0); }
+.copy_block .photo_01 > div::after { content:""; width:100%; height:100%; background-image: url("../../public/photo01.jpg"); position: fixed; top:0; left:0; background-position: center; background-size: cover; background-repeat: no-repeat; z-index: 10; }
 @media screen and (max-width:900px) {
     .copy_block .photo_01 { height:260px; margin-top:60px; }
     .copy_block .photo_01::before { font-size:14px; letter-spacing: 0.3em; }
@@ -84,12 +80,12 @@
     .banner_block > div.banner_content { height:280px; width:84%; margin:20px auto; }
     .banner_block > div.banner_content.image_01 { background-size: cover; background-position: center; }
     .banner_block > div.banner_content.image_02 { background-size: cover; background-position: center; }
-    .banner_block > div.banner_content > a > div.banner_title p { font-size:16px; letter-spacing: 0.1em; }
+    .banner_block > div.banner_content > a > div.banner_title p { font-size:16px; letter-spacing: 0.2em; }
     .banner_block > div.banner_content > a > div.banner_title p::after { width:150px; height:129px;  }
     .banner_block > div.banner_content > a > div.banner_info { left:20%; }
-    .banner_block > div.banner_content > a > div.banner_info p { font-size:12px; line-height: 1.4; letter-spacing: 0em; }
+    .banner_block > div.banner_content > a > div.banner_info p { font-size:12px; line-height: 1.4; letter-spacing: 0.2em; }
     .banner_block > div.banner_content > a > div.banner_link { left:10%; }
-    .banner_block > div.banner_content > a > div.banner_link p { font-size:12px; }
+    .banner_block > div.banner_content > a > div.banner_link p { font-size:12px; letter-spacing:0.05em; }
 
     .banner_block > div.banner_content::before { left:-5%; }
     .banner_block > div.banner_content::after { right:-5%; }

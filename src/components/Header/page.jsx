@@ -5,7 +5,6 @@ import styles from "@/components/Header/header.module.css";
 import { useState, useEffect } from "react";
 import { animate, motion } from "framer-motion";
 
-
 export function Header() {
 
   const [isOpen, setIsOpen] = useState(false);
@@ -14,12 +13,12 @@ export function Header() {
   };
 
   const pcVariants = { 
-    initialValue: {x: "0"},
+    initialValue: {x: "0%"},
     animationValue: {x: isOpen ? "0%" : "0%" }
   };
   const mobileVariants = {
-    initialValue: {x: "100%"},
-    animationValue: {x: isOpen ? "0%" : "100%" }
+    initialValue: {x: "100%", right:"0"},
+    animationValue: {x: isOpen ? "0%" : "100%", right:"0"}
   };
 
   const [isMobile, setIsMobile] = useState(false);
@@ -52,7 +51,7 @@ export function Header() {
       <header className={styles.header}>
 	      <div className={styles.g_nav}>
 	        <h1><a href="/" className={styles.headerTitle}>鎧神社</a></h1>
-          <motion.nav initial="initialValue" animate="animationValue" variants={isMobile ? mobileVariants : pcVariants} transition={{ type: "tween", duration: 0.4, ease: "easeInOut",}}>
+          <motion.nav animate="animationValue" initial="initialValue" variants={isMobile ? mobileVariants : pcVariants} transition={{ type: "tween", duration: 0.4, ease: "easeInOut",}}>
             <div className={styles.sp_logo}><Image src="/logo_bk.png" className={styles.imgAuto} width={200} height={42} alt="鎧神社" /></div>
             <ul className={styles.g_menu}>
             <li><a href="history/">鎧神社ものがたり</a></li>

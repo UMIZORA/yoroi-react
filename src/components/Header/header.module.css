@@ -17,7 +17,8 @@
   .g_nav { flex-direction: column; position:relative; }
   .g_nav h1 { width:fit-content; position:fixed; top:22px; left:50%; transform: translateX(-50%); z-index: 1; }
   .g_nav h1 > a.headerTitle { font-size:20px; margin-left:20px; }
-  .g_nav nav { flex-direction: column; align-items: flex-start; justify-content:flex-start; background-color:rgba(255,255,255,1); width:100%; height:100vh; padding-bottom:calc(100vh); position:relative; z-index: 11; }
+  .g_nav nav { flex-direction: column; align-items: flex-start; justify-content:flex-start; background-color:rgba(255,255,255,1); width:100%; height:100vh; padding-bottom:calc(100vh); transform: translateX(100%); position:relative; z-index: 11; right:-100%; }
+  .g_nav ul { width:84%; margin:auto; gap:0; }
   .g_nav div.sp_logo { display: block; width:60%; max-width:200px; margin:70px auto 25px; }
 }
 
